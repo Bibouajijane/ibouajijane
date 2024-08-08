@@ -72,16 +72,14 @@
             <tr>
               <th>Prix Formation</th>
               <th>Avance</th>
-              <th>Rest</th>
               
-              <th>Total</th>
+              <th>Rest</th>
             </tr>
             </thead>
             <tbody>
               <tr>
                 <td><?php echo $cnt['email']; ?> DH</td>
                 <td><?php echo $cnt['basic_salary']; ?> DH</td>
-                <td><?php echo $cnt['allowance']; ?> DH</td>
                 <td><?php echo $cnt['total']; ?> DH</td>
               </tr>
             </tbody>
@@ -104,13 +102,13 @@
           <div class="table-responsive">
             <table class="table">
               <tr>
-                <th style="width:50%">Prix Total:</th>
+                <th style="width:50%">Prix Formation :</th>
                 <td><?php echo $cnt['email']; ?> DH</td>
               </tr>
               
               <tr>
-                <th>Payed:</th>
-                <td><?php echo $cnt['total']; ?> DH</td>
+                <th>Payed :</th>
+                <td><?php echo $cnt['basic_salary']; ?> DH</td>
               </tr>
             </table>
           </div>

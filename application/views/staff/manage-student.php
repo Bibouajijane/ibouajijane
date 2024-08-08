@@ -1,14 +1,14 @@
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Payement Management
+        Student
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Payement Management</a></li>
-        <li class="active">Manage Payement</li>
+        <li><a href="#">Student Management</a></li>
+        <li class="active">Manage Student</li>
       </ol>
     </section>
 
@@ -37,7 +37,7 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header">
-              <h3 class="box-title">Payement Salary</h3>
+              <h3 class="box-title">Manage Student</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -46,15 +46,20 @@
                   <thead>
                   <tr>
                     <th>#</th>
-                    <th>Student Name</th>
-                    <th>Groupe</th>
+                    <th>Name</th>
                     <th>Photo</th>
-                    <th>Total</th>
-                    <th>Avance</th>
+                    <th>Groupe</th>
+                    <th>Gender</th>
+                    <th>Mobile</th>
+                    <th>CIN</th>
+                    <th>DOB</th>
+                    <th>Joined On</th>
                     
-                    <th>Rest</th>
-                    <th>Invoice</th>
-                    <th>Action</th>
+                    <th>Avance</th>
+                    <th>Prix</th>
+                    <th>Formation</th>
+                    <th>Mode</th>
+                    <th>Actions</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -64,29 +69,31 @@
                     foreach($content as $cnt): 
                   ?>
                       <tr>
-                        <td><?php echo $i; ?></td>
-                        <td><strong><?php echo $cnt['staff_name']; ?></strong></td>
+                      <td><?php echo $i; ?></td>
+                        <td><strong><?php echo $cnt['staff_name']; ?></td></strong></td>
+                        <td><img src="<?php echo base_url(); ?>uploads/profile-pic/<?php echo $cnt['pic'] ?>" class="img" width="80ox" alt="User Image"></td>
                         <td><?php echo $cnt['department_name']; ?></td>
-                        <td><img src="<?php echo base_url(); ?>uploads/profile-pic/<?php echo $cnt['pic'] ?>" class="img-circle" width="50px" alt="User Image"></td>
-                        <td><?php echo $cnt['email']; ?></td>
-                        <td><?php echo $cnt['basic_salary']; ?></td>
+                        <td><?php echo $cnt['gender']; ?></td>
+                        <td><?php echo $cnt['mobile']; ?></td>
+                        <td><?php echo $cnt['city']; ?></td>
+                        <td><?php echo date('d-m-Y', strtotime($cnt['dob'])); ?></td>
+                        <td><?php echo date('d-m-Y', strtotime($cnt['doj'])); ?></td>
                         
-                        
-                        <td><?php echo $cnt['total']; ?> DH </td>
-                        
-                        <td><a href="<?php echo base_url(); ?>salary-invoice/<?php echo $cnt['id']; ?>" class="btn btn-success">Invoice</a></td>
+                        <td><?php echo $cnt['address']; ?> DH</td>
+                        <td><?php echo $cnt['email']; ?> DH</td>
+                        <td><?php echo $cnt['state']; ?></td>
+                        <td><?php echo $cnt['country']; ?></td>
                         <td>
-                          
-                          
-                          <a href="<?php echo base_url(); ?>delete-salary/<?php echo $cnt['id'] ?>" class="btn btn-danger">Delete</a>
+                          <a href="<?php echo base_url(); ?>edit-staff/<?php echo $cnt['id']; ?>" class="btn btn-success">Edit</a>
+                          <a href="<?php echo base_url(); ?>delete-staff/<?php echo $cnt['id']; ?>" class="btn btn-danger">Delete</a>
                         </td>
                       </tr>
                     <?php 
-                    
                       $i++;
                       endforeach;
                       endif; 
-                    ?> 
+                    ?>
+                  
                   </tbody>
                 </table>
               </div>

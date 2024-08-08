@@ -85,7 +85,7 @@
                         <td><?php echo $cnt['country']; ?></td>
                         <td>
                           <a href="<?php echo base_url(); ?>edit-staff/<?php echo $cnt['id']; ?>" class="btn btn-success">Edit</a>
-                          <a href="<?php echo base_url(); ?>delete-staff/<?php echo $cnt['id']; ?>" class="btn btn-danger">Delete</a>
+                          <a href="<?php echo base_url(); ?>delete-staff/<?php echo $cnt['id'] ?>" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a>
                         </td>
                       </tr>
                     <?php 

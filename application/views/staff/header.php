@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Employee Management System</title>
+  <title>Andalouse Manutention System</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -36,9 +36,9 @@
     <!-- Logo -->
     <a href="<?php echo base_url(); ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>OM</b>S</span>
+      <span class="logo-mini"><b>AN</b>S</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Employee</b> Management</span>
+      <span class="logo-lg"><b>Andalouse</b> Management</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -106,22 +106,51 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">MENU</li>
 
         <li class="active"><a href="<?php echo base_url(); ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
+        
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-usd"></i> <span>Salary</span>
+            <i class="fa fa-th-large"></i> <span>Groupes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>view-salary"><i class="fa fa-circle-o"></i> View Salary</a></li>
+            <li><a href="<?php echo base_url(); ?>add-department"><i class="fa fa-circle-o"></i> Add Groupe</a></li>
+            <li><a href="<?php echo base_url(); ?>manage-department"><i class="fa fa-circle-o"></i> Manage Groupe</a></li>
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i> <span>Students</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>add-staff"><i class="fa fa-circle-o"></i> Add Student</a></li>
+            <li><a href="<?php echo base_url(); ?>manage-staff"><i class="fa fa-circle-o"></i> Manage Student</a></li>
+          </ul>
+        </li>
+
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-usd"></i> <span>Payement</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>add-salary"><i class="fa fa-circle-o"></i> Add Payement</a></li>
+            <li><a href="<?php echo base_url(); ?>manage-salary"><i class="fa fa-circle-o"></i> Manage Payement</a></li>
+          </ul>
+        </li>
+       
+<!--
         <li class="treeview">
           <a href="#">
             <i class="fa fa-share"></i> <span>Leave</span>
@@ -130,20 +159,13 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>apply-leave"><i class="fa fa-circle-o"></i> Apply Leave</a></li>
-            <li><a href="<?php echo base_url(); ?>view-leave"><i class="fa fa-circle-o"></i> My Leave History</a></li>
+            <li><a href="<?php echo base_url(); ?>approve-leave"><i class="fa fa-circle-o"></i> Manage Staff's Leave</a></li>
+            <li><a href="<?php echo base_url(); ?>leave-history"><i class="fa fa-circle-o"></i> Leave History</a></li>
           </ul>
         </li>
 
-
+-->
       </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
-
-  <?php
-    if ($this->session->userdata('usertype')!=2)
-    { 
-      redirect('login');
-    }
-  ?>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Employee Management System</title>
+  <title>AN-MA Logistique | System</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -78,23 +78,22 @@
       </div>
       <!-- /.row -->
 
-      <!-- Table row -->
-      <div class="row">
+     <!-- Table row -->
+     <div class="row">
         <div class="col-xs-12 table-responsive">
           <table class="table table-striped">
             <thead>
             <tr>
               <th>Prix Formation</th>
               <th>Avance</th>
+              
               <th>Rest</th>
-              <th>Total</th>
             </tr>
             </thead>
             <tbody>
               <tr>
                 <td><?php echo $cnt['email']; ?> DH</td>
                 <td><?php echo $cnt['basic_salary']; ?> DH</td>
-                <td><?php echo $cnt['allowance']; ?> DH</td>
                 <td><?php echo $cnt['total']; ?> DH</td>
               </tr>
             </tbody>
@@ -106,20 +105,24 @@
 
       <div class="row">
         <!-- accepted payments column -->
-        
+        <div class="col-xs-6">
+          
+          
+        </div>
         <!-- /.col -->
         <div class="col-xs-6">
-          <p class="lead"><strong>Payement Info</strong> </p>
+          <p class="lead"> <strong>Payement Info </strong></p>
 
           <div class="table-responsive">
             <table class="table">
               <tr>
-                <th>Prix Total:</th>
+                <th style="width:50%">Prix Formation:</th>
                 <td><?php echo $cnt['email']; ?> DH</td>
               </tr>
+              
               <tr>
-                <th>Payed:</th>
-                <td><?php echo $cnt['total']; ?> DH</td>
+                <th>Payed :</th>
+                <td><?php echo $cnt['basic_salary']; ?> DH</td>
               </tr>
             </table>
           </div>

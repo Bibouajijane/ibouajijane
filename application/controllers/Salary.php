@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -64,12 +65,12 @@ class Salary extends CI_Controller {
         $id = $this->input->post('txtid');
         $email = $this->input->post('txtemail');
         $basic = $this->input->post('txtbasic');
-        $allowance = $this->input->post('txtallowance');
+        
         $added = $this->session->userdata('userid');
     
         for ($i = 0; $i < count($id); $i++) 
         {
-            $total = $basic[$i] + $allowance[$i]; // Calculate total salary
+            $total = $email[$i] - $basic[$i]; // Calculate total salary
     
             if ($total > 0)
             {
@@ -77,7 +78,7 @@ class Salary extends CI_Controller {
                     'staff_id' => $id[$i],
                     'email' => $email[$i],
                     'basic_salary' => $basic[$i],
-                    'allowance' => $allowance[$i], // Assuming you also want to store allowance
+                    /*'allowance' => $allowance[$i], // Assuming you also want to store allowance */
                     'total' => $total,
                     'added_by' => $added
                 );
@@ -147,9 +148,10 @@ class Salary extends CI_Controller {
             <thead>
                   <tr>
                     <th>Student</th>
-                    <th>Prix (DH)</th>
-                    <th>Avance (DH)</th>
                     <th>Total (DH)</th>
+                    <th>Avance (DH)</th>
+                    
+                    <th>Rest (DH)</th>
                   </tr>
                   </thead>
                   <tbody>';
@@ -162,6 +164,7 @@ class Salary extends CI_Controller {
                 <td><input type="hidden" name="txtid[]" value="'.$d["id"].'">
                     <input type="text" name="txtbasic[]" class="form-control expenses">
                 </td>
+                 
                 <td><input type="text" id="total" name="txttotal[]" class="form-control" readonly></td>
                 </tr>';
             }

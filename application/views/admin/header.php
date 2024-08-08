@@ -34,6 +34,12 @@
 
   <header class="main-header">
     <!-- Logo -->
+    <a href="<?php echo base_url(); ?>" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>AN</b>S</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Andalouse</b> Management</span>
+    </a>
    
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -56,7 +62,9 @@
               <!-- User image -->
               <li class="user-header">
                 <img src="<?php echo base_url(); ?>assets/dist/img/admin-user.png" class="img-circle" alt="User Image">
-                <p>Admin</p>
+                <p>Admin
+                  <small>Since August, 2024</small>
+                </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
@@ -140,6 +148,7 @@
             <li><a href="<?php echo base_url(); ?>manage-salary"><i class="fa fa-circle-o"></i> Manage Payement</a></li>
           </ul>
         </li>
+       
 <!--
         <li class="treeview">
           <a href="#">

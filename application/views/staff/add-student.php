@@ -158,7 +158,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Avance</label>
-                    <input type="text" class="form-control" name="txtaddress" placeholder="Avance"></input>
+                    <textarea class="form-control" name="txtaddress" placeholder="Avance"></textarea>
                   </div>
                 </div>
                 
